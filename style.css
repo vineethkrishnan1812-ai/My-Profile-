@@ -1,0 +1,282 @@
+/* ===========================
+   VINEETH PORTFOLIO 2026
+   PART 2A
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+
+font-family:'Poppins',sans-serif;
+background:#03040a;
+color:#fff;
+overflow-x:hidden;
+
+}
+
+/* 3D Canvas */
+
+#bg-canvas{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-2;
+
+}
+
+/* Loader */
+
+#loader{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#03040a;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
+
+}
+
+#loader h1{
+
+font-size:40px;
+font-weight:700;
+letter-spacing:4px;
+color:#5ad1ff;
+animation:pulse 1.5s infinite;
+
+}
+
+@keyframes pulse{
+
+0%{opacity:.3;}
+50%{opacity:1;}
+100%{opacity:.3;}
+
+}
+
+/* Navbar */
+
+nav{
+
+position:fixed;
+top:20px;
+left:50%;
+transform:translateX(-50%);
+
+width:90%;
+max-width:1200px;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:18px 35px;
+
+border-radius:50px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.15);
+
+z-index:1000;
+
+}
+
+.logo{
+
+font-size:24px;
+font-weight:800;
+letter-spacing:3px;
+
+background:linear-gradient(90deg,#5ad1ff,#c79bff);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+}
+
+nav ul{
+
+display:flex;
+gap:35px;
+list-style:none;
+
+}
+
+nav a{
+
+color:white;
+text-decoration:none;
+font-size:15px;
+font-weight:500;
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#5ad1ff;
+
+}
+
+/* Hero */
+
+#home{
+
+min-height:100vh;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+text-align:center;
+
+padding:100px 20px;
+
+}
+
+.hero-content{
+
+max-width:900px;
+
+}
+
+.hero-content h3{
+
+color:#5ad1ff;
+
+letter-spacing:5px;
+
+margin-bottom:20px;
+
+font-weight:600;
+
+}
+
+.hero-content h1{
+
+font-size:72px;
+
+font-weight:800;
+
+line-height:1.1;
+
+margin-bottom:15px;
+
+background:linear-gradient(90deg,#ffffff,#5ad1ff,#c79bff);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+}
+
+.hero-content h2{
+
+font-size:26px;
+
+color:#d6d6d6;
+
+margin-bottom:25px;
+
+font-weight:400;
+
+}
+
+.hero-content p{
+
+font-size:18px;
+
+line-height:1.8;
+
+color:#aaaaaa;
+
+max-width:700px;
+
+margin:auto;
+
+margin-bottom:40px;
+
+}
+
+/* Buttons */
+
+.buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+.btn{
+
+padding:15px 35px;
+
+border-radius:40px;
+
+text-decoration:none;
+
+font-weight:600;
+
+background:linear-gradient(90deg,#5ad1ff,#7d6bff);
+
+color:white;
+
+transition:.4s;
+
+box-shadow:0 0 25px rgba(90,209,255,.3);
+
+}
+
+.btn:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 0 40px rgba(90,209,255,.7);
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.hero-content h1{
+
+font-size:45px;
+
+}
+
+nav{
+
+padding:15px;
+
+}
+
+nav ul{
+
+display:none;
+
+}
+
+}
