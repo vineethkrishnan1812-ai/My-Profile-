@@ -280,3 +280,197 @@ display:none;
 }
 
 }
+/* ===========================
+   PART 2B
+   ABOUT + SKILLS
+=========================== */
+
+.section{
+    padding:120px 8%;
+    position:relative;
+    z-index:10;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title h4{
+    color:#5ad1ff;
+    letter-spacing:4px;
+    font-size:14px;
+    margin-bottom:10px;
+}
+
+.section-title h2{
+    font-size:48px;
+    font-weight:700;
+    background:linear-gradient(90deg,#ffffff,#5ad1ff,#c79bff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.about-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.glass-card{
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:25px;
+
+    padding:30px;
+
+    transition:.4s;
+
+    box-shadow:0 0 25px rgba(0,0,0,.3);
+
+}
+
+.glass-card:hover{
+
+transform:translateY(-12px);
+
+box-shadow:0 0 40px rgba(90,209,255,.35);
+
+border:1px solid rgba(90,209,255,.4);
+
+}
+
+.glass-card h3{
+
+font-size:22px;
+
+margin-bottom:18px;
+
+color:#5ad1ff;
+
+}
+
+.glass-card p{
+
+color:#d5d5d5;
+
+line-height:1.8;
+
+}
+
+.glass-card ul{
+
+padding-left:20px;
+
+margin-top:10px;
+
+}
+
+.glass-card li{
+
+margin-bottom:10px;
+
+color:#dddddd;
+
+}
+
+/* ===========================
+        SKILLS
+=========================== */
+
+.skills-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+gap:25px;
+
+}
+
+.skills-grid .glass-card{
+
+text-align:center;
+
+padding:40px 25px;
+
+}
+
+.skills-grid h3{
+
+margin:0;
+
+font-size:22px;
+
+}
+
+.skills-grid .glass-card:hover{
+
+transform:translateY(-15px) scale(1.05);
+
+}
+
+/* Glow Animation */
+
+@keyframes glow{
+
+0%{
+
+box-shadow:0 0 15px rgba(90,209,255,.2);
+
+}
+
+50%{
+
+box-shadow:0 0 45px rgba(90,209,255,.55);
+
+}
+
+100%{
+
+box-shadow:0 0 15px rgba(90,209,255,.2);
+
+}
+
+}
+
+.skills-grid .glass-card{
+
+animation:glow 5s infinite;
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.section{
+
+padding:90px 20px;
+
+}
+
+.section-title h2{
+
+font-size:34px;
+
+}
+
+.about-container{
+
+grid-template-columns:1fr;
+
+}
+
+.skills-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
