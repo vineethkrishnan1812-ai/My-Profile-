@@ -730,26 +730,47 @@ animation:blobFloat 14s ease-in-out infinite;
 }
 
 .blob1{
-width:260px;
-height:260px;
+width:280px;
+height:220px;
+
 top:8%;
-right:10%;
+right:8%;
+
+border-radius:
+62% 38% 55% 45% /
+40% 65% 35% 60%;
+
+animation:blobFloat 16s ease-in-out infinite;
 }
 
 .blob2{
-width:180px;
-height:180px;
-left:8%;
-bottom:15%;
-animation-delay:2s;
+width:200px;
+height:170px;
+
+left:6%;
+bottom:12%;
+
+border-radius:
+45% 55% 35% 65% /
+60% 40% 55% 45%;
+
+animation:blobFloat 18s ease-in-out infinite;
+animation-delay:3s;
 }
 
 .blob3{
-width:120px;
+width:140px;
 height:120px;
+
 right:22%;
-bottom:28%;
-animation-delay:5s;
+bottom:30%;
+
+border-radius:
+55% 45% 70% 30% /
+35% 65% 45% 55%;
+
+animation:blobFloat 20s ease-in-out infinite;
+animation-delay:6s;
 }
 
 @keyframes floatBlob{
