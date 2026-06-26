@@ -80,13 +80,13 @@ nodeGeometry.setAttribute(
 
 const nodeMaterial = new THREE.PointsMaterial({
 
-    color:0x5ad1ff,
+    color:0xffffff,
 
-    size:2,
+    size:0.6,
 
     transparent:true,
 
-    opacity:1
+    opacity:.85
 
 });
 
@@ -121,7 +121,7 @@ for(let i=0;i<nodeCount;i++){
 
         const dist=Math.sqrt(dx*dx+dy*dy+dz*dz);
 
-        if(dist<30){
+        if(dist<18){
 
             linePositions.push(ax,ay,az);
             linePositions.push(bx,by,bz);
@@ -148,7 +148,7 @@ const lineMaterial=new THREE.LineBasicMaterial({
 
     transparent:true,
 
-    opacity:.15
+    opacity:.05
 
 });
 
@@ -169,11 +169,11 @@ function animate3D(){
 
     requestAnimationFrame(animate3D);
 
-    nodes.rotation.y+=0.001;
+    nodes.rotation.y+=0.0002;
 
     nodes.rotation.x+=0.0003;
 
-    lines.rotation.y+=0.001;
+    lines.rotation.y+=0.0002;
 
     renderer.render(scene,camera);
 
