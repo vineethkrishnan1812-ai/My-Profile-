@@ -1,48 +1,28 @@
-const rootCanvas = document.createElement("canvas");
-rootCanvas.id = "root-canvas";
-document.body.appendChild(rootCanvas);
+const canvas = document.createElement("canvas");
+canvas.id = "root-canvas";
+document.body.appendChild(canvas);
 
-const ctx = rootCanvas.getContext("2d");
+const ctx = canvas.getContext("2d");
 
-function resizeCanvas() {
-    rootCanvas.width = window.innerWidth;
-    rootCanvas.height = window.innerHeight;
+function resize() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
 }
-resizeCanvas();
-window.addEventListener("resize", resizeCanvas);
+resize();
+window.addEventListener("resize", resize);
 
-// Root starting point (under profile)
-const startX = window.innerWidth * 0.68;
-const startY = window.innerHeight * 0.60;
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-function drawBranch(x, y, angle, length, depth) {
+  ctx.strokeStyle = "red";
+  ctx.lineWidth = 4;
 
-    if (depth <= 0) return;
+  ctx.beginPath();
+  ctx.moveTo(canvas.width / 2, 200);
+  ctx.lineTo(canvas.width / 2, 500);
+  ctx.stroke();
 
-    const x2 = x + Math.cos(angle) * length;
-    const y2 = y + Math.sin(angle) * length;
-
-    ctx.beginPath();
-    ctx.moveTo(x, y);
-    ctx.lineTo(x2, y2);
-
-    ctx.strokeStyle = "rgba(120,180,255,0.45)";
-    ctx.lineWidth = depth * 0.5;
-    ctx.stroke();
-
-    drawBranch(x2, y2, angle - 0.35, length * 0.75, depth - 1);
-    drawBranch(x2, y2, angle + 0.35, length * 0.75, depth - 1);
-
+  requestAnimationFrame(draw);
 }
 
-function animateRoots() {
-
-    ctx.clearRect(0, 0, rootCanvas.width, rootCanvas.height);
-
-    drawBranch(startX, startY, Math.PI / 2, 80, 7);
-
-    requestAnimationFrame(animateRoots);
-
-}
-
-animateRoots();
+draw();
