@@ -474,3 +474,48 @@ grid-template-columns:1fr;
 }
 
 }
+.hero-badge{
+
+display:inline-block;
+
+padding:12px 25px;
+
+border-radius:50px;
+
+background:rgba(90,209,255,.15);
+
+border:1px solid #5ad1ff;
+
+color:#5ad1ff;
+
+margin-bottom:25px;
+
+font-weight:600;
+
+letter-spacing:2px;
+
+}
+
+#typing{
+
+color:#5ad1ff;
+
+height:40px;
+
+font-size:28px;
+
+margin:20px 0;
+
+}
+
+.hero-buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
