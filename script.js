@@ -66,26 +66,3 @@ document.body.style.setProperty("--x",e.clientX+"px");
 document.body.style.setProperty("--y",e.clientY+"px");
 
 });
-/* Mouse Spotlight */
-body::before{
-content:"";
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-pointer-events:none;
-background:radial-gradient(
-300px circle at var(--x,50%) var(--y,50%),
-rgba(90,209,255,.12),
-transparent 60%
-);
-z-index:-1;
-}
-document.addEventListener("mousemove",(e)=>{
-
-document.body.style.setProperty("--x",e.clientX+"px");
-
-document.body.style.setProperty("--y",e.clientY+"px");
-
-});
