@@ -56,7 +56,7 @@ window.innerHeight
 // PART 4B - 3D HR NETWORK
 // ======================================
 
-const nodeCount = 250;
+const nodeCount = 120;
 
 const positions = [];
 const linePositions = [];
@@ -121,7 +121,7 @@ for(let i=0;i<nodeCount;i++){
 
         const dist=Math.sqrt(dx*dx+dy*dy+dz*dz);
 
-        if(dist<18){
+        if(dist<12){
 
             linePositions.push(ax,ay,az);
             linePositions.push(bx,by,bz);
@@ -142,13 +142,13 @@ lineGeometry.setAttribute(
 
 );
 
-const lineMaterial=new THREE.LineBasicMaterial({
+const lineMaterial = new THREE.LineBasicMaterial({
 
-    color:0x5ad1ff,
+    color:0x8b5cf6,
 
     transparent:true,
 
-    opacity:.05
+    opacity:.015
 
 });
 
