@@ -179,19 +179,4 @@ function animate3D(){
 
 }
 
-animate3D();
-/* Mouse Spotlight */
-
-body::before{
-    content:"";
-    position:fixed;
-    inset:0;
-    pointer-events:none;
-    background:
-    radial-gradient(
-        300px circle at var(--x,50%) var(--y,50%),
-        rgba(90,209,255,.12),
-        transparent 60%
-    );
-    z-index:-1;
-}
+animate3D()
